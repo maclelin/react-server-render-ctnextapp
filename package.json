@@ -1,0 +1,19 @@
+{
+  "name": "react-server-render-ctnextapp",
+  "version": "1.0.0",
+  "description": "this is a project created by create-next-app,used for serve testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lj10734qq/react-server-render-ctnextapp.git"
+  },
+  "keywords": [
+    "react",
+    "create-next-app"
+  ],
+  "author": "linjian",
+  "license": "ISC"
+}
