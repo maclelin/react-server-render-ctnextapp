@@ -1,6 +1,15 @@
+/*
+ * @Author: linjian
+ * @Date: 2020-01-02 19:34:07
+ * @LastEditors  : linjian
+ * @Description: file content
+ * @email: linjian@szkingdom.com
+ */
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import css from './index.scss'
+import { Button } from 'antd'
 
 const Home = () => (
   <div>
@@ -12,11 +21,11 @@ const Home = () => (
     <Nav />
 
     <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
+      <h1 className={"title " + css.hero}>Welcome to Next.js!</h1>
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
-
+      <Button>Antd Button</Button>
       <div className="row">
         <a href="https://nextjs.org/docs" className="card">
           <h3>Documentation &rarr;</h3>
