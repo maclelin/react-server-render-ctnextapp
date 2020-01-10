@@ -8,10 +8,12 @@
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Performance from '../utils-client/performance'
 import css from './index.scss'
 import { Button } from 'antd'
+const request  = require('../utils-server/request')
 
-const Home = () => (
+const Home = (props) => (
   <div>
     <Head>
       <title>Home</title>
@@ -19,9 +21,11 @@ const Home = () => (
     </Head>
 
     <Nav />
-
+    <Performance/>
     <div className="hero">
       <h1 className={"title " + css.hero}>Welcome to Next.js!</h1>
+      <p>the star is {props.stars}</p>
+      <p>the result is {JSON.stringify(props.taskList)}</p>
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
@@ -92,6 +96,12 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
+
+Home.getInitialProps = async () => {
+  const taskList = await request.getApiSync('kingdom.kgrp.get_all_join_task_list','v1.0',{"taskName":""})
+  return { stars: 5 ,taskList}
+}
+
 
 export default Home
