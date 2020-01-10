@@ -16,6 +16,7 @@ const logger = require('koa-logger')
 
 
 const logUtil = require('./utils-server/logUtil');
+const redisIns = require('./utils-server/redisTool').connectRedis();
 const apiRouter = require('./routers/Api')
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -58,7 +59,7 @@ app.prepare().then(() => {
     await handle(ctx.req, ctx.res)
     ctx.respond = false
   })
-
+  redisIns.set('sessionId','测试数据123')
   server.listen(process.env.PORT, () => {
     console.log('server is running at http://localhost:8081')
   })
