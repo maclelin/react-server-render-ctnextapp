@@ -1,0 +1,30 @@
+.headerstyle {
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 30px;
+    .logo {
+        line-height: 30px;
+    }
+}
+.menuStyle {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    .menu {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    .userlogo {
+        height: 50%;
+        border-radius: 5%;
+    }
+    .loginNameStyle {
+        color: #fff;
+        font-size: 12px;
+    }
+}

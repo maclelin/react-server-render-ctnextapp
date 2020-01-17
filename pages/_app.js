@@ -7,5 +7,6 @@
  */
 import App from 'next/app'
 import 'antd/dist/antd.css'
+import './_app.scss'
 
 export default App

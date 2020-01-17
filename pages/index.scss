@@ -1,6 +1,42 @@
-.hero {
-    color: red;
-    .title {
-        color: red;
+.content {
+    min-height: 600px;
+    .page-content {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin: 30px 60px;
+        padding: 10px 30px;
+        background: #fff;
+        .userpiclog {
+            max-height: 100px;
+            border-radius: 50px;
+        }
+        .userpic {
+            display: flex;
+            .userinfo {
+                padding: 15px 20px;
+                .greeting {
+                    color: #333;
+                    margin-bottom: 15px;
+                }
+                .document {
+                    color:#999;
+                    font-size: 12px;
+                }
+            }
+        }
+        .task-info {
+            .infoItem {
+                text-align: center;
+                margin-top: 10px;
+                color:#999;
+                font-size: 12px;
+                p {
+                    height: 10px;
+                    line-height: 10px;
+                }
+            }
+        }
     }
 }
