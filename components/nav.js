@@ -26,7 +26,7 @@ const Nav = () => (
   <>
     <Header className={css.headerstyle}>
       <div className={css.logo}>
-        <img alt="logo" className="logo" src="/logo.png"/>
+        <img alt="logo" className="logo" src="/nxtImg/logo.png"/>
       </div>
       <div className={css.menuStyle}>
         <Menu
@@ -53,7 +53,7 @@ const Nav = () => (
           </Menu.Item>
         </Menu>
         <Icon type="bell" style={{color: '#fff', padding: '0 10px'}}/>
-        <img alt="user picture" className={css.userlogo} src="/photo.user.jpg"/>
+        <img alt="user picture" className={css.userlogo} src="/nxtImg/photo.user.jpg"/>
         <label className={css.loginNameStyle}>分公司1填报</label>
       </div>
       

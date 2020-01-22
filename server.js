@@ -29,6 +29,7 @@ app.prepare().then(() => {
   server.use(bodyparser({
     enableTypes:['json', 'form', 'text']
   }))
+  server.use(require('koa-static')(__dirname + '/public'))
   server.use(json())
   server.use(logger())
   // logger
@@ -61,6 +62,6 @@ app.prepare().then(() => {
   })
   // redisIns.set('sessionId','测试数据123')
   server.listen(process.env.PORT, () => {
-    console.log('server is running at http://localhost:8081')
+    console.log('server is running at http://localhost:8082')
   })
 })

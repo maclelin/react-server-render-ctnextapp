@@ -70,8 +70,7 @@ function getAjaxParams(a, v, p) {
   }
 } //getAjaxParams
 
-axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded";
+// axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 axios.defaults.timeout = 2500;
 // 请求拦截器
 axios.interceptors.request.use(
@@ -96,8 +95,9 @@ const request = {
     const encryptionParams = getAjaxParams(api, version, params);
     return axios.post(process.env.proxy + '/api', encryptionParams);
   },
-  getApiSync: async (api, version, params) => {
+  getApiSync: async (ctx, api, version, params) => {
     const encryptionParams = getAjaxParams(api, version, params);
+    axios.defaults.headers = ctx.req.headers;
     const response = await axios.post(process.env.proxy + '/api', encryptionParams);
     const { data, status } = response;
     return { data, status };
